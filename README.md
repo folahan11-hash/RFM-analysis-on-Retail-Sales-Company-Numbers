@@ -69,7 +69,6 @@ FROM rfm_scores;
 ## 📂 Repository Structure
 * `sql/rfm_analysis.sql` — Complete, commented PostgreSQL script from raw aggregation to final segmentation.
 * `data/` — Sample CSV of the retail dataset / link to data source.
-* `images/` — Visual charts exported from query results.
 
 ---
 
