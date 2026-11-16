@@ -13,11 +13,11 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 
 | Customer Segment | RFM Score Criteria | Customer Count | % of Total Base | Avg. Spend ($) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 0 | 0 % | $[Insert $] |
-| **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | [Insert #] | [Insert %] | $[Insert $] |
-| **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | [Insert #] | [Insert %] | $[Insert $] |
-| **At Risk** | R: 1–2, F: 3–5, M: 3–5 | [Insert #] | [Insert %] | $[Insert $] |
-| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | 236 | 23.6 % | $[Insert $] |
+| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 155 | 155 % | $1000 |
+| **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | 208 | 20.8 % | $520.48 |
+| **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | 164 | 16.4 % | $61.01 |
+| **At Risk** | R: 1–2, F: 3–5, M: 3–5 | 237 | 23.7 % | $713.92 |
+| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | 236 | 23.6 % | $57.35 |
 
 ---
 
@@ -28,11 +28,6 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 
 ### Sample SQL Logic
 ```sql
-SELECT * FROM public."RETAIL DATA"
-ORDER BY "Transaction_ID" ASC LIMIT 100
-
-SELECT * FROM "RETAIL DATA";
-
 WITH raw_rfm AS (
     SELECT 
         "Customer",
@@ -45,24 +40,33 @@ WITH raw_rfm AS (
 rfm_scores AS (
     SELECT 
         "Customer",
+        monetary_value,
         NTILE(5) OVER (ORDER BY recency_days DESC) AS r_score,
         NTILE(5) OVER (ORDER BY frequency_count ASC) AS f_score,
         NTILE(5) OVER (ORDER BY monetary_value ASC) AS m_score
     FROM raw_rfm
+),
+segmented_customers AS (
+    SELECT 
+        "Customer",
+        monetary_value,
+        CASE 
+            WHEN r_score >= 4 AND f_score >= 4 AND m_score >= 4 THEN 'Champions'
+            WHEN r_score >= 3 AND f_score >= 3 THEN 'Loyal Customers'
+            WHEN r_score <= 2 AND f_score >= 3 THEN 'At Risk'
+            WHEN r_score >= 4 AND f_score <= 2 THEN 'Potential Loyalists'
+            ELSE 'Hibernating'
+        END AS customer_segment
+    FROM rfm_scores
 )
 SELECT 
-    "Customer",
-    r_score,
-    f_score,
-    m_score,
-    CASE 
-        WHEN r_score >= 4 AND f_score >= 4 AND m_score >= 4 THEN 'Champions'
-        WHEN r_score >= 3 AND f_score >= 3 THEN 'Loyal Customers'
-        WHEN r_score <= 2 AND f_score >= 3 THEN 'At Risk'
-        WHEN r_score >= 4 AND f_score <= 2 THEN 'Potential Loyalists'
-        ELSE 'Hibernating'
-    END AS customer_segment
-FROM rfm_scores;
+    customer_segment,
+    COUNT(*) AS total_customers,
+    ROUND(AVG(monetary_value)::numeric, 2) AS avg_spend
+FROM segmented_customers
+GROUP BY customer_segment
+ORDER BY avg_spend DESC;
+
 ```
 ---
 
