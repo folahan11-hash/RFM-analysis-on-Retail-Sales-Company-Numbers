@@ -17,7 +17,7 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 | **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | [Insert #] | [Insert %] | $[Insert $] |
 | **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | [Insert #] | [Insert %] | $[Insert $] |
 | **At Risk** | R: 1–2, F: 3–5, M: 3–5 | [Insert #] | [Insert %] | $[Insert $] |
-| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | [Insert #] | [Insert %] | $[Insert $] |
+| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | 236 | 23.6 % | $[Insert $] |
 
 ---
 
