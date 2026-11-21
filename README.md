@@ -13,7 +13,7 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 
 | Customer Segment | RFM Score Criteria | Customer Count | % of Total Base | Avg. Spend ($) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 15.5 | 15.5 % | $1000 |
+| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 155 | 15.5 % | $1000 |
 | **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | 208 | 20.8 % | $520.48 |
 | **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | 164 | 16.4 % | $61.01 |
 | **At Risk** | R: 1–2, F: 3–5, M: 3–5 | 237 | 23.7 % | $713.92 |
