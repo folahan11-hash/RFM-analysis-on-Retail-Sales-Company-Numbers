@@ -4,11 +4,11 @@
 To help maximize marketing ROI and reduce customer churn, I performed an **RFM (Recency, Frequency, Monetary) Analysis** on a retail transaction dataset using **PostgreSQL (pgAdmin)**. By scoring customers from 1 to 5 across their purchasing habits, I segmented the customer base into actionable groups—identifying top revenue drivers ("Champions") as well as high-value buyers who are slipping away ("At Risk")
 
 ## Key Business Insights and Recommendations
-* **Top Revenue Drivers (Champions):** **[X]%** of customers fall into the *Champions* segment, generating **[X]%** of total revenue. 
+* **Top Revenue Drivers (Champions):** **15.5%** of customers fall into the *Champions* segment, generating **[X]%** of total revenue. 
   * *Action:* Enroll these buyers in a VIP loyalty tier and offer early access to new products rather than profit-cutting discounts.
-* **Retention Opportunity (At Risk):** **[X]%** of customers previously spent above average but have not purchased in over **[X]** days.
+* **Retention Opportunity (At Risk):** **23.7%** of customers previously spent above average but have not purchased in over **[X]** days.
   * *Action:* Launch an automated win-back email campaign featuring personalized product recommendations and a time-sensitive incentive.
-* **Growth Potential (Potential Loyalists):** **[X]%** of recent buyers have high monetary value but low purchase frequency.
+* **Growth Potential (Potential Loyalists):** **16.4%** of recent buyers have high monetary value but low purchase frequency.
   * *Action:* Cross-sell complementary items within 14 days of their first purchase to build repeat buying habits.
 
 | Customer Segment | RFM Score Criteria | Customer Count | % of Total Base | Avg. Spend ($) |
