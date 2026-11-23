@@ -6,7 +6,7 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 ## Key Business Insights and Recommendations
 * **Top Revenue Drivers (Champions):** **15.5%** of customers fall into the *Champions* segment, generating **37.1%** of total revenue. 
   * *Action:* Enroll these buyers in a VIP loyalty tier and offer early access to new products rather than profit-cutting discounts.
-* **Retention Opportunity (At Risk):** **23.7%** of customers previously spent above average but have not purchased in over **[X]** days.
+* **Retention Opportunity (At Risk):** **23.7%** of customers previously spent above average but have not purchased in over **292** days.
   * *Action:* Launch an automated win-back email campaign featuring personalized product recommendations and a time-sensitive incentive.
 * **Growth Potential (Potential Loyalists):** **16.4%** of recent buyers have high monetary value but low purchase frequency.
   * *Action:* Cross-sell complementary items within 14 days of their first purchase to build repeat buying habits.
