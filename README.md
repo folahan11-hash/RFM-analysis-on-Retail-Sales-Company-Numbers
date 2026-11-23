@@ -62,10 +62,13 @@ segmented_customers AS (
 SELECT 
     customer_segment,
     COUNT(*) AS total_customers,
+    ROUND(SUM(monetary_value)::numeric, 2) AS total_revenue,
+    ROUND(100.0 * SUM(monetary_value) / SUM(SUM(monetary_value)) OVER (), 2) AS revenue_share_pct,
     ROUND(AVG(monetary_value)::numeric, 2) AS avg_spend
 FROM segmented_customers
 GROUP BY customer_segment
-ORDER BY avg_spend DESC;
+ORDER BY total_revenue DESC;
+
 
 ```
 ---
