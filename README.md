@@ -11,13 +11,13 @@ To help maximize marketing ROI and reduce customer churn, I performed an **RFM (
 * **Growth Potential (Potential Loyalists):** **16.4%** of recent buyers have high monetary value but low purchase frequency.
   * *Action:* Cross-sell complementary items within 14 days of their first purchase to build repeat buying habits.
 
-| Customer Segment | RFM Score Criteria | Customer Count | % of Total Base | Avg. Spend ($) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 155 | 15.5 % | $1000.00 |
-| **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | 208 | 20.8 % | $520.48 |
-| **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | 164 | 16.4 % | $61.01 |
-| **At Risk** | R: 1–2, F: 3–5, M: 3–5 | 237 | 23.7 % | $713.92 |
-| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | 236 | 23.6 % | $57.35 |
+| Customer Segment | RFM Score Criteria | Customer Count | % of Total Base | Avg. Spend ($) | Total Revenue ($)
+| :--- | :--- | :--- | :--- | :--- | :---
+| **Champions** | R: 4–5, F: 4–5, M: 4–5 | 155 | 15.5 % | $1000.00 | $155000.00
+| **Loyal Customers** | R: 3–5, F: 3–5, M: 3–5 | 208 | 20.8 % | $520.48 | $108260.00
+| **Potential Loyalists** | R: 4–5, F: 1–3, M: 1–3 | 164 | 16.4 % | $61.01 | $10005.00
+| **At Risk** | R: 1–2, F: 3–5, M: 3–5 | 237 | 23.7 % | $713.92 | $169200.00
+| **Hibernating** | R: 1–2, F: 1–2, M: 1–2 | 236 | 23.6 % | $57.35 | $13535.00
 
 ---
 
